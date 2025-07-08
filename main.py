@@ -6,10 +6,10 @@ from io import BytesIO
 
 app = FastAPI()
 
-# Ativando CORS
+# Liberando CORS para permitir chamadas do navegador
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # depois podemos restringir para o domínio do GitHub Pages
+    allow_origins=["*"],  # pode trocar depois pelo domínio da página
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
